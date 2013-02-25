@@ -39,8 +39,7 @@ $.widget("ui.timespinner", $.ui.spinner, {
         this._refresh();
     },
     getTime: function () {
-        var timeFormat = Date.CultureInfo.formatPatterns.shortTime;
-        return this._parse(this.element.val()).toString(timeFormat);
+        return this.element.val().toString();
     },
     setTime: function (value) {
         this.options.start = new Date(value.getFullYear(), value.getMonth(), value.getDate(), value.getHours(), value.getMinutes(), 0, 0);
