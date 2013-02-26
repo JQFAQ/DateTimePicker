@@ -11,7 +11,7 @@
             var year = 0, month = 0, day = 0, hour = 0, minute = 0;
             var date = 0;
             $('<input id="time" class="datetimepicker" style="float:left;"/>').insertAfter(this.element);
-            $('.datetimepicker').wrapAll('<div class="datetimepicker"></div>');
+             $('.datetimepicker').wrapAll('<div class="datetimepicker" style="height:'+$("#date").height()+'"></div>');
             var $time = $("#time");
             this.element.datepicker({
                 onSelect: function () {
