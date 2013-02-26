@@ -12,7 +12,6 @@
             var date = 0;           
             $('<input id="time" class="datetimepicker" style="float:left; height:' + $(this.element).height() + 'px"/>').insertAfter(this.element);
             $('.datetimepicker').wrapAll('<div class="datetimepicker" style="height:' + $(this.element).height() + 'px"></div>');
-            var widget = $(this)[0].widget();
             var $time = $("#time");
             this.element.datepicker({
                 onSelect: function () {
