@@ -9,9 +9,10 @@
             //declarations
             var self = this;
             var year = 0, month = 0, day = 0, hour = 0, minute = 0;
-            var date = 0;
-            $('<input id="time" class="datetimepicker" style="float:left;"/>').insertAfter(this.element);
-             $('.datetimepicker').wrapAll('<div class="datetimepicker" style="height:'+$("#date").height()+'"></div>');
+            var date = 0;           
+            $('<input id="time" class="datetimepicker" style="float:left; height:' + $(this.element).height() + 'px"/>').insertAfter(this.element);
+            $('.datetimepicker').wrapAll('<div class="datetimepicker" style="height:' + $(this.element).height() + 'px"></div>');
+            var widget = $(this)[0].widget();
             var $time = $("#time");
             this.element.datepicker({
                 onSelect: function () {
@@ -31,6 +32,8 @@
             $time.timespinner({
                 start: new Date(+year, +month, +day, +hour, +minute, 0, 0)
             });
+            var widget = $time.data().timespinner.widget()[0].tagName;
+            $(widget).css('height', $(this.element).height()+2);
         },
         GetDateAndTime: function () {
             var time = $("#time").timespinner("getTime");
