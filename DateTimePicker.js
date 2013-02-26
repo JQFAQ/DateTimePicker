@@ -32,7 +32,7 @@
                 start: new Date(+year, +month, +day, +hour, +minute, 0, 0)
             });
             var widget = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
-            $(widget).css('height', $(this.element).height()+2);
+            $(widget).css('height', $(this.element).height());
              $(widget).removeClass('ui-corner-all');
         },
         GetDateAndTime: function () {
