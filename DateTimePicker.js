@@ -35,7 +35,10 @@
             $(widget).css('height', $(this.element).height());
              $(widget).css('width', 85+'px');
             $(widget).removeClass('ui-corner-all');
-            $(widget).find('input').width(($(widget).width()-25) + 'px');
+            var input=$(widget).find('input');
+            input.width(($(widget).width()-25) + 'px');
+            input.css('margin', 0 + 'px');
+            input.css('font-size', 1.2 + 'em');
         },
         GetDateAndTime: function () {
             var time = $("#time").timespinner("getTime");
