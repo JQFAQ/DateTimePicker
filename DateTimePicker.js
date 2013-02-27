@@ -35,7 +35,6 @@
             $(widget).css('height', $(this.element).height());
              $(widget).css('width', 85+'px');
             $(widget).removeClass('ui-corner-all');
-            $(widget).removeClass('ui-state-active');
             var input=$(widget).find('input');
             input.width(($(widget).width()-25) + 'px');
             input.css('margin', 0 + 'px');
