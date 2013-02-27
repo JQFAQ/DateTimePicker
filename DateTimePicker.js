@@ -38,7 +38,7 @@
             var input=$(widget).find('input');
             input.width(($(widget).width()-25) + 'px');
             input.css('margin', 0 + 'px');
-            input.css('font-size', $(this.element).css('font-size'));
+            input.css('font-size', 13+'px');
         },
         GetDateAndTime: function () {
             var time = $("#time").timespinner("getTime");
