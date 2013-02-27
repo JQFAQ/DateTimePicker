@@ -33,7 +33,9 @@
             });
             var widget = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
             $(widget).css('height', $(this.element).height());
-             $(widget).removeClass('ui-corner-all');
+             $(widget).css('width', 85+'px');
+            $(widget).removeClass('ui-corner-all');
+            $(widget).find('input').width(($(widget).width()-25) + 'px');
         },
         GetDateAndTime: function () {
             var time = $("#time").timespinner("getTime");
