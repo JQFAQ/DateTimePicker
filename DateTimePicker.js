@@ -69,7 +69,6 @@
             var spanwidth = ((this.wrapper.width() * 50/*for 50% from wrapper*/) / 100)/*converting width From Percentage to Pixels*/;
             span.css('width', spanwidth + 'px');
             input.css('width',span.width());
-            input.css('height',span.height());
             input.css('margin', 0 + 'px').css('font-size', $element.css('font-size'));
         }
     });
