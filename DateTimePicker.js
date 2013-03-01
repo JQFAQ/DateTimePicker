@@ -60,16 +60,15 @@
         RefreshWidthandHeight:function(){
             var $element = this.element;
             var $time = this.timePicker;
-            var TimeWidgetElement = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
-            TimeWidgetElement.css('height', this.element.height()+2+'px'/*for border*/).removeClass('ui-corner-all');
+            var timeWidgetElement = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
+            timeWidgetElement.css('height', this.element.height() + 4/*for border*/).removeClass('ui-corner-all');
             this.wrapper.css('width',$element.width() + 'px');
-            var input = TimeWidgetElement.find('input');
-            var span = TimeWidgetElement.find('span');
+            var input = timeWidgetElement.find('input');
+            var span = timeWidgetElement.find('span');
             $element.css('width', 46 + '%');
             var spanwidth = ((this.wrapper.width() * 50/*for 50% from wrapper*/) / 100)/*converting width From Percentage to Pixels*/;
             span.css('width', spanwidth + 'px');
-            input.css('width',span.width());
-            input.css('margin', 0 + 'px').css('font-size', $element.css('font-size'));
+            input.css({ width: span.width(), margin: 0 + 'px', 'font-size': $element.css('font-size'),'font-family':$element.css('font-family'), height: this.element.height() + 2/*for border*/ });
         }
     });
 })(jQuery);
