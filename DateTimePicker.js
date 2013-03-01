@@ -61,14 +61,14 @@
             var $element = this.element;
             var $time = this.timePicker;
             var TimeWidgetElement = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
-            TimeWidgetElement.css('height', this.element.height()).removeClass('ui-corner-all');
+            TimeWidgetElement.css('height', this.element.height()+2+'px'/*for border*/).removeClass('ui-corner-all');
             this.wrapper.css('width',$element.width() + 'px');
             var input = TimeWidgetElement.find('input');
             var span = TimeWidgetElement.find('span');
             $element.css('width', 46 + '%');
             var spanwidth = ((this.wrapper.width() * 50/*for 50% from wrapper*/) / 100)/*converting width From Percentage to Pixels*/;
             span.css('width', spanwidth + 'px');
-            input.css('width',span.width()+'px');
+            input.css('width',span.width());
             input.css('margin', 0 + 'px').css('font-size', $element.css('font-size'));
         }
     });
