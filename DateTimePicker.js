@@ -61,7 +61,7 @@
             var $element = this.element;
             var $time = this.timePicker;
             var TimeWidgetElement = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
-            TimeWidgetElement.css('height', this.element.height() + 2/*for border*/).removeClass('ui-corner-all');
+            TimeWidgetElement.css('height', this.element.height()).removeClass('ui-corner-all');
             this.wrapper.css('width',$element.width() + 'px');
             var input = TimeWidgetElement.find('input');
             var span = TimeWidgetElement.find('span');
