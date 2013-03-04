@@ -61,10 +61,10 @@
             var $element = this.element;
             var $time = this.timePicker;
             var timeWidgetElement = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
-            $element.css({ margin: 0 + 'px'})
+            $element.css({ margin: 0 + 'px'});
             timeWidgetElement.css('height', $element.height() + ($element.outerHeight() - $element.height()-2 /*for border*/)).removeClass('ui-corner-all');
             timeWidgetElement.css({ 'margin-top': 0 + 'px',  'vertical-align': 'top', });         
-            timeWidgetElement.css({ top: $element.position(top) })
+            timeWidgetElement.css({ top: $element.position(top) });
             this.wrapper.css('width',$element.width() + 'px');
             var input = timeWidgetElement.find('input');
             var span = timeWidgetElement.find('span');
