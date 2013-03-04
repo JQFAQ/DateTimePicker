@@ -61,16 +61,16 @@
             var $element = this.element;
             var $time = this.timePicker;
             var timeWidgetElement = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
-            var element = this.element;
-            element.css({ margin: 0 + 'px', padding: 0 + 'px' })
-            timeWidgetElement.css('height', element.height() + (element.outerHeight() - element.height() - 2/*for border*/)).removeClass('ui-corner-all');
-            timeWidgetElement.css({ 'margin-top': 0 + 'px', position: 'absolute', margin: 0 + 'px', padding: 0 + 'px' });
+            $element.css({ margin: 0 + 'px'})
+            timeWidgetElement.css('height', $element.height() + ($element.outerHeight() - $element.height()-2 /*for border*/)).removeClass('ui-corner-all');
+            timeWidgetElement.css({ 'margin-top': 0 + 'px',  'vertical-align': 'top', });         
+            timeWidgetElement.css({ top: $element.position(top) })
             this.wrapper.css('width',$element.width() + 'px');
             var input = timeWidgetElement.find('input');
             var span = timeWidgetElement.find('span');
-            $element.css('width', 48 + '%');
-            var spanwidth = ((this.wrapper.width() * 46/*for 50% from wrapper*/) / 100)/*converting width From Percentage to Pixels*/;
-            span.css('width', spanwidth + 'px');
+            $element.css('width', 46 + '%');
+            var spanwidth = ((this.wrapper.width() * 48/*for 50% from wrapper*/) / 100)/*converting width From Percentage to Pixels*/;
+            span.css({width:spanwidth + 'px'});
             input.css({ width: span.width(), margin: 0 + 'px', 'vertical-align': 'top', 'font-size': $element.css('font-size'), 'font-family': $element.css('font-family'), height: this.element.height() + 2/*for border*/ });
         }
     });
