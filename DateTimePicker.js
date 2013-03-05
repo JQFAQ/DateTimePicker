@@ -1,12 +1,12 @@
 (function ($) {
     $.widget("radiantq.DateTimePicker", {
         options: {
-            setdate: null
+            setdate: null,
+            dateformat:'mm-dd-yy'
         },
         wrapper: null,
         timePicker: null,
         _create: function () {
-            //declarations
             var self = this;
             var year = 0, month = 0, day = 0, hour = 0, minute = 0;
             var date = 0;
@@ -17,6 +17,7 @@
             this.wrapper.append(this.timePicker);
             var $time = this.timePicker;
             this.element.datepicker({
+                dateFormat: this.options.dateformat,
                 onSelect: function () {
                     date = $(this).datepicker('getDate');
                     $time.timespinner({
@@ -61,9 +62,9 @@
             var $element = this.element;
             var $time = this.timePicker;
             var timeWidgetElement = ($time.data("uiTimespinner") || $time.data("timespinner")).widget();
-            $element.css({ margin: 0 + 'px'});
+            $element.css({ margin: 0 + 'px' })
             timeWidgetElement.css('height', $element.height() + ($element.outerHeight() - $element.height()-2 /*for border*/)).removeClass('ui-corner-all');
-            timeWidgetElement.css({ 'margin-top': 0 + 'px',  'vertical-align': 'top', });
+            timeWidgetElement.css({ 'margin-top': 0 + 'px',  'vertical-align': 'top', }); 
             this.wrapper.css('width',$element.width() + 'px');
             var input = timeWidgetElement.find('input');
             var span = timeWidgetElement.find('span');
