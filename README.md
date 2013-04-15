@@ -40,4 +40,4 @@ The setDate allows you to set a date on the widget.
     $("# DateTimePicker").DateTimePicker("setDate", new Date(date));
     
 
-<strong>Sponsored By</strong> <a href="http://jqfaq.com/"><b>JQFAQ.com</b></a> 
+<strong>Sponsored By</strong><div><a href="http://radiantq.com/"><img src="http://jqfaq.com/wp-content/uploads/banner_468x60.jpg"</a></div>
